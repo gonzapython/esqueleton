@@ -13,6 +13,7 @@ def enviar_datos():
     if request.method == 'GET':
         data = request.args # args: los argumentos q he puesto en el postman -> http://localhost:5000/receta?contain=tomate&have=spagethi
         print(data)
+        # se hacen consultas a la BD y se devuelve otro data -- OJO
         return jsonify(data)
 
 @app.route('/options', methods=['GET', 'POST'])   # en postman poner: http://localhost:5000/options
