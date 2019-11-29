@@ -1,0 +1,2 @@
+# esqueleton
+Estructura del proyecto
