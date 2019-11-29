@@ -11,12 +11,11 @@ def enviar_datos():
         return jsonify(result) #SIEMPRE HAY QUE DEVOLVER ALGO
     
     if request.method == 'GET':
-        data = request.args
+        data = request.args # args: los argumentos q he puesto en el postman -> http://localhost:5000/receta?contain=tomate&have=spagethi
         print(data)
         return jsonify(data)
 
-@app.route('/options', methods=['GET', 'POST'])
-# en postman poner: http://localhost:5000/options
+@app.route('/options', methods=['GET', 'POST'])   # en postman poner: http://localhost:5000/options
 def show_options():
     if request.method == 'GET':
         options = [{'crear_receta': '/recetas', 'metodo':'post'},
