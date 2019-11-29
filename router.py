@@ -20,7 +20,9 @@ def show_options():
     if request.method == 'GET':
         options = [{'crear_receta': '/recetas', 'metodo':'post'},
                     {'registrarse': '/user', 'metodo':'post'},
-                    {'obtener_todas_recetas':'/recetas', 'metodo':'get'}]
+                    {'obtener_todas_recetas':'/recetas', 'metodo':'get'},
+                    {'obtener_una_receta':'/receta', 'metodo':'get'}  # he añadido esta opcion yo, OJO
+                    ]
         return jsonify(options)
 
 if __name__ == "__main__":
